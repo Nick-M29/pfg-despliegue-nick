@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD PFG Despliegue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Usuarios</h1>
+        
+        <div class="card">
+            <h2>Agregar Nuevo Usuario</h2>
+            <form id="userForm">
+                <input type="text" id="nombre" placeholder="Nombre completo" required>
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+                <button type="submit" class="btn-save">Guardar Usuario</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Lista de Usuarios</h2>
+            <div id="userList"></div>
+        </div>
+    </div>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h3>Editar Usuario</h3>
+            <input type="hidden" id="editId">
+            <input type="text" id="editNombre">
+            <input type="email" id="editEmail">
+            <div class="modal-buttons">
+                <button onclick="updateUser()" class="btn-save">Actualizar</button>
+                <button onclick="closeModal()" class="btn-cancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
